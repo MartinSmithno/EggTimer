@@ -2,18 +2,14 @@
 //  ViewController.swift
 //  EggTimer
 //
-//  Created by Martin Smith on 05/02/2022.
+//  Created by Angela Yu on 08/07/2019.
+//  Copyright © 2019 The App Brewery. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+    
 
 
 }
-
