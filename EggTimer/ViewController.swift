@@ -15,21 +15,30 @@ class ViewController: UIViewController {
                                   "Hard":12]
     var counter: Int = 0
     
+    var timer = Timer()
+    
+    
+    @IBOutlet weak var statusOfEgg: UILabel!
+    
     @IBAction func hardnessSelected(_ sender: UIButton) {
+        
+        timer.invalidate()
         
         let hardness: String = sender.currentTitle!
             
-        counter = (eggTimes[hardness]!)*60
+        counter = (eggTimes[hardness]!)*1
         
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {
             (Timer) in
             if self.counter > 0 {
                 print ("\(self.counter) seconds")
                 self.counter -= 1
             } else {
                 Timer.invalidate()
+                self.statusOfEgg.text = "Your egg is done!"
             }
         }
+        
 
     }
     
